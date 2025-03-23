@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .node-button {
+    @apply relative flex items-center justify-center w-20 h-20 rounded-full bg-white shadow-lg 
+           hover:shadow-xl transition-all duration-300 ease-in-out cursor-pointer
+           border-4 border-primary hover:scale-110;
+  }
+  
+  .node-button.completed {
+    @apply bg-secondary border-secondary text-white;
+  }
+  
+  .node-button.locked {
+    @apply bg-gray-200 border-gray-400 cursor-not-allowed;
+  }
+}
+
+:root {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
